@@ -1,0 +1,215 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+:focus {
+  outline: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+button {
+  border: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container-fluid {
+  width: 100%;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+header {
+  -webkit-box-shadow: 0 0 10px 0 #ddd;
+          box-shadow: 0 0 10px 0 #ddd;
+  background-color: white;
+}
+header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header .container .logo {
+  padding: 15px 0;
+  color: #001736;
+  font-size: 25px;
+  font-weight: bold;
+}
+header .container nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header .container nav ul li {
+  padding: 15px 30px;
+  overflow: hidden;
+}
+header .container nav ul li a {
+  color: #001736;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  font-size: 18px;
+  font-weight: 300;
+}
+header .container nav ul li a:hover, header .container nav ul li a.active {
+  color: #10c3f7;
+}
+
+.landing .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  height: calc(100vh - 60px);
+}
+.landing .container .text {
+  width: 45%;
+  -webkit-animation: fadeInDown 1s;
+          animation: fadeInDown 1s;
+  margin-top: -50px;
+}
+.landing .container .text h1 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+.landing .container .text h1 span {
+  font-size: inherit;
+  color: #10c3f7;
+}
+@media (max-width: 992px) {
+  .landing .container .text h1 h1 {
+    font-size: 20px;
+  }
+  .landing .container .text h1 p {
+    font-size: 16px;
+  }
+}
+.landing .container .text p {
+  line-height: 1.8;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.landing .container .text button {
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 10px;
+  background-color: #10c3f7;
+}
+.landing .container .image {
+  width: 500px;
+}
+.landing .container .image img {
+  width: 100%;
+  -webkit-animation: up-and-down 8s 1s infinite;
+          animation: up-and-down 8s 1s infinite;
+}
+@media (max-width: 767px) {
+  .landing .container .image {
+    display: none;
+  }
+}
+
+@-webkit-keyframes up-and-down {
+  0%,
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+  }
+}
+
+@keyframes up-and-down {
+  0%,
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+  }
+}
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+/*# sourceMappingURL=index.css.map */

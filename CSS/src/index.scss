@@ -1,0 +1,94 @@
+@import "./variables/colors";
+
+@import "./helpers/mixins";
+
+@import "./layout/global-rules";
+
+@import "./layout/header";
+
+.landing {
+  .container {
+    @include flex-space-between(true);
+    padding-left: 15px;
+    padding-right: 15px;
+    height: calc(100vh - 60px);
+
+    .text {
+      width: 45%;
+      animation: fadeInDown 1s;
+      margin-top: -50px;
+
+      h1 {
+        font-size: 30px;
+        margin-bottom: 10px;
+
+        span {
+          font-size: inherit;
+          color: $lightBlue;
+        }
+
+        @media (max-width: 992px) {
+          h1 {
+            font-size: 20px;
+          }
+
+          p {
+            font-size: 16px;
+          }
+        }
+
+      }
+
+      p {
+        line-height: $mainLineHeight;
+        font-size: $mainPSize;
+        margin-bottom: 10px;
+      }
+
+      button {
+        @include font($mainPSize, 500);
+        color: #fff;
+        padding: 8px 16px;
+        border-radius: 10px;
+        background-color: $lightBlue;
+      }
+    }
+
+    .image {
+      width: 500px;
+
+      img {
+        width: 100%;
+        animation: up-and-down 8s 1s infinite;
+      }
+
+      @media (max-width: 767px) {
+        display: none;
+      }
+    }
+  }
+}
+
+@keyframes up-and-down {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-50px);
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px)
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0)
+  }
+}

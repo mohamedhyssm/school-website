@@ -1,0 +1,38 @@
+header {
+  box-shadow: 0 0 10px 0 #ddd;
+  background-color: white;
+
+  .container {
+    @include flex-space-between(true);
+
+
+    .logo {
+      padding: 15px 0;
+      color: $black;
+      @include font(25px, bold);
+    }
+
+    nav {
+      ul {
+        display: flex;
+        align-items: center;
+
+        li {
+          padding: 15px 30px;
+          overflow: hidden;
+
+          a {
+            color: $black;
+            transition: $mainTransition;
+            @include font($mainPSize, 300);
+
+            &:hover,
+            &.active {
+              color: $lightBlue;
+            }
+          }
+        }
+      }
+    }
+  }
+}
