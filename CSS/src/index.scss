@@ -1,4 +1,4 @@
-@import "./variables/colors";
+@import "./variables/variables";
 
 @import "./helpers/mixins";
 
@@ -8,12 +8,19 @@
 
 .landing {
   background-color: #ececec;
+  position: relative;
+
+  .star {
+    font-size: 30px;
+    color: $lightBlue;
+  }
 
   .container {
     @include flex-space-between(true);
     padding-left: 15px;
     padding-right: 15px;
     height: calc(100vh - 60px);
+    z-index: 10;
 
     .text {
       width: 45%;
@@ -29,14 +36,9 @@
           color: $lightBlue;
         }
 
-        @media (max-width: 992px) {
-          h1 {
-            font-size: 20px;
-          }
-
-          p {
-            font-size: 16px;
-          }
+        .star {
+          font-size: inherit;
+          color: $lightBlue;
         }
 
       }
@@ -53,7 +55,24 @@
         padding: 8px 16px;
         border-radius: 10px;
         background-color: $lightBlue;
+        cursor: pointer;
+        transition: $mainTransition;
+
+        &:hover {
+          background-color: $lightBlueActive;
+        }
       }
+
+      @media (max-width: 992px) {
+        h1 {
+          font-size: 25px;
+        }
+
+        p {
+          font-size: 16px;
+        }
+      }
+
 
       @media (max-width: 767px) {
         width: 100%;

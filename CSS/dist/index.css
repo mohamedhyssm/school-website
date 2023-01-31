@@ -86,6 +86,7 @@ header .container nav {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
+  z-index: 99999;
 }
 header .container nav .burger-icon {
   cursor: pointer;
@@ -140,6 +141,11 @@ header .container nav ul li a:hover, header .container nav ul li a.active {
 
 .landing {
   background-color: #ececec;
+  position: relative;
+}
+.landing .star {
+  font-size: 30px;
+  color: #10c3f7;
 }
 .landing .container {
   display: -webkit-box;
@@ -154,6 +160,7 @@ header .container nav ul li a:hover, header .container nav ul li a.active {
   padding-left: 15px;
   padding-right: 15px;
   height: calc(100vh - 60px);
+  z-index: 10;
 }
 .landing .container .text {
   width: 45%;
@@ -169,13 +176,9 @@ header .container nav ul li a:hover, header .container nav ul li a.active {
   font-size: inherit;
   color: #10c3f7;
 }
-@media (max-width: 992px) {
-  .landing .container .text h1 h1 {
-    font-size: 20px;
-  }
-  .landing .container .text h1 p {
-    font-size: 16px;
-  }
+.landing .container .text h1 .star {
+  font-size: inherit;
+  color: #10c3f7;
 }
 .landing .container .text p {
   line-height: 1.8;
@@ -189,6 +192,20 @@ header .container nav ul li a:hover, header .container nav ul li a.active {
   padding: 8px 16px;
   border-radius: 10px;
   background-color: #10c3f7;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.landing .container .text button:hover {
+  background-color: #0ba4d1;
+}
+@media (max-width: 992px) {
+  .landing .container .text h1 {
+    font-size: 25px;
+  }
+  .landing .container .text p {
+    font-size: 16px;
+  }
 }
 @media (max-width: 767px) {
   .landing .container .text {
