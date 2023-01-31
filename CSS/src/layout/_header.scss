@@ -5,7 +5,6 @@ header {
   .container {
     @include flex-space-between(true);
 
-
     .logo {
       padding: 15px 0;
       color: $black;
@@ -13,6 +12,19 @@ header {
     }
 
     nav {
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      .burger-icon {
+        cursor: pointer;
+        font-size: 22px;
+
+        @media (min-width: 560px) {
+          display: none;
+        }
+      }
+
       ul {
         display: flex;
         align-items: center;
@@ -31,8 +43,22 @@ header {
               color: $lightBlue;
             }
           }
+
+          @media (max-width: 560px) {
+            padding: 8px 16px;
+
+            a {
+
+              font-size: 16px;
+            }
+          }
         }
       }
+    }
+
+    @media (max-width: 560px) {
+      justify-content: center;
+      flex-direction: column;
     }
   }
 }

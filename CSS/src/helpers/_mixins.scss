@@ -4,7 +4,7 @@
   border-radius: 50%;
 }
 
-@mixin flex-center($isColumn) {
+@mixin flex-center($isColumn: false) {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,7 +14,7 @@
   }
 }
 
-@mixin flex-space-between($isAlignCenter) {
+@mixin flex-space-between($isAlignCenter: false) {
   display: flex;
   justify-content: space-between;
 
@@ -23,7 +23,7 @@
   }
 }
 
-@mixin position-abs($top, $left, $isTransformCenter) {
+@mixin position-abs($top: 0, $left: 0, $isTransformCenter: false) {
   position: absolute;
   top: $top;
   left: $left;
@@ -33,7 +33,7 @@
   }
 }
 
-@mixin overlay($color, $opacity) {
+@mixin overlay($color: #000000, $opacity: 0.8) {
   position: absolute;
   left: 0;
   top: 0;
@@ -42,7 +42,7 @@
   background-color: rgba($color, $opacity);
 }
 
-@mixin grid-media($min, $max, $gap) {
+@mixin grid-media($min: 300px, $max: 1fr, $gap: 20px) {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax($min, $max));
   gap: $gap;
