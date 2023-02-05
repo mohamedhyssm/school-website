@@ -6,6 +6,7 @@
 
 @import "./layout/header";
 
+
 .landing {
   background-color: #ececec;
   position: relative;
@@ -19,13 +20,14 @@
     @include flex-space-between(true);
     padding-left: 15px;
     padding-right: 15px;
-    height: calc(100vh - 60px);
+    height: calc(100vh - 92px);
     z-index: 10;
 
     .text {
       width: 45%;
-      animation: fadeInDown 1s;
+      animation: fadeInDown 0.8s 0.7s forwards;
       margin-top: -50px;
+      opacity: 0;
 
       h1 {
         font-size: 30px;
@@ -45,6 +47,7 @@
 
       p {
         line-height: $mainLineHeight;
+        color: $grey;
         font-size: $mainPSize;
         margin-bottom: 10px;
       }
@@ -87,36 +90,51 @@
 
       img {
         width: 100%;
-        animation: up-and-down 8s 1s infinite;
+        opacity: 0;
+        animation: fadeInTop 1s forwards, up-and-down 8s 2.5s infinite;
       }
 
       @media (max-width: 767px) {
         display: none;
       }
     }
+
+    @media (max-width: 767px) {
+      height: calc(100vh - 127px);
+    }
   }
 }
 
-@keyframes up-and-down {
+.article-1 {
+  @include section-padding();
 
-  0%,
-  100% {
-    transform: translateY(0);
+  .main-heading {
+    margin-bottom: 60px;
+    font-size: 2rem;
+    text-align: center;
   }
 
-  50% {
-    transform: translateY(-50px);
+  .container {
+    display: flex;
+
+    .text {
+      padding: 20px;
+
+      h3 {
+        color: $lightBlue;
+        font-size: 25px;
+      }
+
+      p {
+        color: $grey;
+        line-height: $mainLineHeight;
+      }
+    }
+
+    img {
+      width: 50%;
+    }
   }
 }
 
-@keyframes fadeInDown {
-  0% {
-    opacity: 0;
-    transform: translateY(-50px)
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0)
-  }
-}
+@import "./helpers/animations";
