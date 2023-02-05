@@ -78,8 +78,8 @@ header .container .logo {
 }
 header .container .logo img {
   width: 100px;
-  -webkit-animation: left-to-right 0.7s;
-          animation: left-to-right 0.7s;
+  -webkit-animation: left-to-right 1s;
+          animation: left-to-right 1s;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -98,6 +98,9 @@ header .container nav {
           align-items: center;
   position: relative;
   z-index: 99999;
+  opacity: 0;
+  -webkit-animation: fadeInDown 1s forwards;
+          animation: fadeInDown 1s forwards;
 }
 header .container nav .burger-icon {
   cursor: pointer;
@@ -175,8 +178,8 @@ header .container nav ul li a:hover, header .container nav ul li a.active {
 }
 .landing .container .text {
   width: 45%;
-  -webkit-animation: fadeInDown 0.8s 0.7s forwards;
-          animation: fadeInDown 0.8s 0.7s forwards;
+  -webkit-animation: fadeInDown 1s forwards;
+          animation: fadeInDown 1s forwards;
   margin-top: -50px;
   opacity: 0;
 }
@@ -234,8 +237,8 @@ header .container nav ul li a:hover, header .container nav ul li a.active {
 .landing .container .image img {
   width: 100%;
   opacity: 0;
-  -webkit-animation: fadeInTop 1s forwards, up-and-down 8s 2.5s infinite;
-          animation: fadeInTop 1s forwards, up-and-down 8s 2.5s infinite;
+  -webkit-animation: fadeInTop 1s forwards, up-and-down 8s 1s infinite;
+          animation: fadeInTop 1s forwards, up-and-down 8s 1s infinite;
 }
 @media (max-width: 767px) {
   .landing .container .image {

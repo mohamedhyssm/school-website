@@ -25,7 +25,7 @@
 
     .text {
       width: 45%;
-      animation: fadeInDown 0.8s 0.7s forwards;
+      animation: fadeInDown 1s forwards;
       margin-top: -50px;
       opacity: 0;
 
@@ -91,7 +91,7 @@
       img {
         width: 100%;
         opacity: 0;
-        animation: fadeInTop 1s forwards, up-and-down 8s 2.5s infinite;
+        animation: fadeInTop 1s forwards, up-and-down 8s 1s infinite;
       }
 
       @media (max-width: 767px) {

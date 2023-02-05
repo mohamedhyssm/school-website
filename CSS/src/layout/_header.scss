@@ -11,7 +11,7 @@ header {
 
       img {
         width: 100px;
-        animation: left-to-right 0.7s;
+        animation: left-to-right 1s;
         transition: $mainTransition;
 
         &:hover {
@@ -26,6 +26,8 @@ header {
       align-items: center;
       position: relative;
       z-index: 99999;
+      opacity: 0;
+      animation: fadeInDown 1s forwards;
 
       .burger-icon {
         cursor: pointer;
