@@ -15,8 +15,8 @@ header {
         transition: $mainTransition;
 
         &:hover {
-          box-shadow: 0 0 20px 2000px #ddd;
           filter: brightness(110%);
+          transform: scale(1.2);
         }
       }
     }
@@ -49,11 +49,12 @@ header {
           a {
             color: $black;
             transition: $mainTransition;
-            @include font($mainPSize, 300);
+            @include font(18px, 300);
 
             &:hover,
             &.active {
               color: $lightBlue;
+              font-size: 20px;
             }
           }
 
