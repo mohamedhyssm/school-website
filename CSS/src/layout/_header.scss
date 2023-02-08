@@ -11,8 +11,11 @@ header {
 
       img {
         width: 100px;
-        animation: left-to-right 1s;
         transition: $mainTransition;
+
+        &.animation {
+          animation: left-to-right 1s;
+        }
 
         &:hover {
           filter: brightness(110%);
@@ -26,8 +29,11 @@ header {
       align-items: center;
       position: relative;
       z-index: 99999;
-      opacity: 0;
-      animation: fadeInDown 1s forwards;
+
+      &.animation {
+        opacity: 0;
+        animation: fadeInDown 1s forwards;
+      }
 
       .burger-icon {
         cursor: pointer;

@@ -18,17 +18,33 @@
   }
 
   .container {
+    // align center and justify space between
     @include flex-space-between(true);
+    // padding
     padding-left: 15px;
     padding-right: 15px;
+    // dimensions
     height: calc(100vh - 92px);
     z-index: 10;
 
+    @media (max-width: 767px) {
+      height: calc(100vh - 127px);
+    }
+
     .text {
+      // dimensions and margin
       width: 45%;
-      animation: fadeInDown 1s forwards;
       margin-top: -50px;
+      // animation move text from top to down
+      animation: fadeInDown 1s forwards;
       opacity: 0;
+
+      @media (max-width: 767px) {
+        width: 100%;
+        text-align: center;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
 
       h1 {
         font-size: 2rem;
@@ -47,17 +63,22 @@
       }
 
       p {
+        // main line height is 1.8
         line-height: $mainLineHeight;
         color: $grey;
+        // main font size is 18px 
         font-size: $mainPSize;
         margin-bottom: 10px;
       }
 
       button {
+        // font-size and weight
         @include font(18px, 500);
         color: #fff;
+        // border and margin
         padding: 8px 16px;
         border-radius: 10px;
+        // formats
         background-color: $lightBlue;
         cursor: pointer;
         transition: $mainTransition;
@@ -78,12 +99,6 @@
       }
 
 
-      @media (max-width: 767px) {
-        width: 100%;
-        text-align: center;
-        padding-left: 20px;
-        padding-right: 20px;
-      }
     }
 
     .image {
@@ -92,16 +107,13 @@
       img {
         width: 100%;
         opacity: 0;
+        // animation move text from down to top and then infinite move up and down
         animation: fadeInTop 1s forwards, up-and-down 8s 1s infinite;
       }
 
       @media (max-width: 767px) {
         display: none;
       }
-    }
-
-    @media (max-width: 767px) {
-      height: calc(100vh - 127px);
     }
   }
 }
@@ -110,6 +122,7 @@
 
 // Start Article
 .article-1 {
+  // padding 60px left and right
   @include section-padding();
 
   .main-heading {
@@ -138,7 +151,9 @@
 
       p {
         color: $grey;
+        // main font size is 18px
         font-size: $mainPSize;
+        // main line height is 1.8
         line-height: $mainLineHeight;
       }
 
