@@ -120,27 +120,19 @@
 
 // End Landing
 
-// Start Article
-.article-1 {
-  // padding 60px left and right
-  @include section-padding();
-
-  .main-heading {
-    margin-bottom: 60px;
-    font-size: 32px;
-    text-align: center;
-
-    @media (max-width: 767px) {
-      margin-bottom: 10px;
-    }
-  }
+// Start Main Article Structure
+article {
+  @include section-padding(20px);
 
   .container {
     display: flex;
+    align-items: center;
+    opacity: 0;
 
     .text {
       padding: 20px;
       width: 70%;
+
 
       h3 {
         color: $lightBlue;
@@ -174,16 +166,47 @@
     }
 
     img {
-      width: 500px;
-      align-self: center;
+      width: 400px;
+    }
 
-      @media (max-width: 767px) {
-        display: none;
+    @media (max-width: 767px) {
+      flex-direction: column;
+
+      img {
+        order: -1;
+        width: 300px;
       }
     }
   }
 }
 
-// End Article
+// End Main Article Structure
+
+// Start First Article
+.article-1 {
+  // padding 60px left and right
+  @include section-padding(60px, 20px);
+
+  .main-heading {
+    margin-bottom: 60px;
+    font-size: 32px;
+    text-align: center;
+    opacity: 0;
+
+    @media (max-width: 767px) {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+// End First Article
+
+.leftToRight {
+  animation: left-to-right 1s forwards;
+}
+
+.fadeInDown {
+  animation: fadeInDown 1s forwards;
+}
 
 @import "./helpers/animations";
