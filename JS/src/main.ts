@@ -2,15 +2,30 @@ let firstArticelContainer = <HTMLDivElement>document.querySelector(".article-1 .
   secondArticelContainer = <HTMLDivElement>document.querySelector(".article-2 .container"),
   ideaHeading = <HTMLHeadElement>document.getElementById("main-heading")
 
+let settingScroll: number= 0;
+
+if (window.innerWidth <= 767) {
+  settingScroll= 400
+}
+
+window.addEventListener("resize", () => {
+  if (window.innerWidth <= 767) {
+    settingScroll= 400
+  }
+  else {
+    settingScroll = 0
+  }
+})
+
+
 window.addEventListener("scroll", () => {
   if (window.scrollY <= 300) {
     ideaHeading.classList.add("leftToRight")
   }
-  else if (window.scrollY <= 500) {
+  else if (window.scrollY <= (500 + settingScroll)) {
     firstArticelContainer.classList.add("fadeInDown")
   }
-  else if (window.scrollY <= 800) {
+  else if (window.scrollY <= (800 + settingScroll)) {
     secondArticelContainer.classList.add("fadeInDown")
   }
-  console.log(window.scrollY)
 })
