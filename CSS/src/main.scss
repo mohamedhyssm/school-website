@@ -183,7 +183,8 @@ article {
 // End Main Article Structure
 
 // Start First Article
-.article-1 {
+.article-1,
+.feature-1 {
   // padding 60px left and right
   @include section-padding(60px, 20px);
 

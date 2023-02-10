@@ -315,18 +315,21 @@ article .container img {
   }
 }
 
-.article-1 {
+.article-1,
+.feature-1 {
   padding-top: 60px;
   padding-bottom: 20px;
 }
-.article-1 .main-heading {
+.article-1 .main-heading,
+.feature-1 .main-heading {
   margin-bottom: 60px;
   font-size: 32px;
   text-align: center;
   opacity: 0;
 }
 @media (max-width: 767px) {
-  .article-1 .main-heading {
+  .article-1 .main-heading,
+  .feature-1 .main-heading {
     margin-bottom: 10px;
   }
 }
