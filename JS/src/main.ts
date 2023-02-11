@@ -15,7 +15,6 @@ let firstIdeaContainer = <HTMLDivElement>document.querySelector(".article-1 .con
 
 if (window.innerWidth <= 600) {
   settingScroll= 300
-  // navBar
   liNavBar.forEach( (li) => (li as HTMLDivElement).addEventListener("click", function () {
     ulNavBar.classList.remove("ul-flex")
   }))

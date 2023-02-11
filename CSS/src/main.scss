@@ -24,12 +24,9 @@
     padding-left: 15px;
     padding-right: 15px;
     // dimensions
+    margin-top: 92px;
     height: calc(100vh - 92px);
     z-index: 10;
-
-    @media (max-width: 767px) {
-      height: calc(100vh - 127px);
-    }
 
     .text {
       // dimensions and margin

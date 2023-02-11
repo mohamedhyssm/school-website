@@ -64,6 +64,11 @@ header {
   -webkit-box-shadow: 0 0 10px 0 #ddd;
           box-shadow: 0 0 10px 0 #ddd;
   background-color: white;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+  width: 100%;
 }
 header .container {
   display: -webkit-box;
@@ -182,13 +187,9 @@ header .container ul.ul-flex {
           align-items: center;
   padding-left: 15px;
   padding-right: 15px;
+  margin-top: 92px;
   height: calc(100vh - 92px);
   z-index: 10;
-}
-@media (max-width: 767px) {
-  .landing .container {
-    height: calc(100vh - 127px);
-  }
 }
 .landing .container .text {
   width: 45%;
