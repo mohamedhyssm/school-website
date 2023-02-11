@@ -1,12 +1,21 @@
 "use strict";
-let firstIdeaContainer = document.querySelector(".article-1 .container"), secondIdeaContainer = document.querySelector(".article-2 .container"), firstFeatureContainer = document.querySelector(".feature-1 .container"), secondFeatureContainer = document.querySelector(".feature-2 .container"), ideaHeading = document.getElementById("main-heading-idea"), featureHeading = document.getElementById("main-heading-feature");
-let settingScroll = 0;
+let burgerIcon = document.getElementById("burgerIcon"), ulNavBar = document.getElementById("ulNavBar"), liNavBar = Array.from(ulNavBar.children);
+let firstIdeaContainer = document.querySelector(".article-1 .container"), secondIdeaContainer = document.querySelector(".article-2 .container"), firstFeatureContainer = document.querySelector(".feature-1 .container"), secondFeatureContainer = document.querySelector(".feature-2 .container"), ideaHeading = document.getElementById("main-heading-idea"), featureHeading = document.getElementById("main-heading-feature"), settingScroll = 0;
 if (window.innerWidth <= 600) {
     settingScroll = 300;
+    liNavBar.forEach((li) => li.addEventListener("click", function () {
+        ulNavBar.classList.remove("ul-flex");
+    }));
 }
+burgerIcon.addEventListener("click", () => {
+    ulNavBar.classList.toggle("ul-flex");
+});
 window.addEventListener("resize", () => {
     if (window.innerWidth <= 600) {
         settingScroll = 300;
+        liNavBar.forEach((li) => li.addEventListener("click", function () {
+            ulNavBar.classList.remove("ul-flex");
+        }));
     }
     else {
         settingScroll = 0;

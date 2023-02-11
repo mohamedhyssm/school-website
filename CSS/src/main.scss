@@ -71,7 +71,7 @@
         margin-bottom: 10px;
       }
 
-      button {
+      a {
         // font-size and weight
         @include font(18px, 500);
         color: #fff;
@@ -133,7 +133,6 @@ article {
       padding: 20px;
       width: 70%;
 
-
       h3 {
         color: $lightBlue;
         font-size: 24px;
@@ -182,7 +181,7 @@ article {
 
 // End Main Article Structure
 
-// Start First Article
+// Start First Article and Feature
 .article-1,
 .feature-1 {
   // padding 60px left and right
@@ -200,7 +199,7 @@ article {
   }
 }
 
-// End First Article
+// End First Article And Feature
 
 .leftToRight {
   animation: left-to-right 1s forwards;

@@ -19,16 +19,17 @@
   <header>
     <div class="container">
       <a href="#home" class="logo">
-        <img src="Images/favicon.png" alt="">
+        <img src="Images/favicon.png" alt="icon">
       </a>
-      <nav>
-        <ul>
-          <li><a href="/" class="active">Home</a></li>
-          <li><a href="#idea">Idea</a></li>
-          <li><a href="#features">Features</a></li>
-          <li><a href="/Join.html">Join Now</a></li>
-        </ul>
-      </nav>
+      <div id="burgerIcon">
+        <i class="fa-solid fa-bars burger-icon"></i>
+      </div>
+      <ul id="ulNavBar">
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#idea">Idea</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#">Join Now</a></li>
+      </ul>
     </div>
   </header>
   <!-- End Header -->
@@ -42,7 +43,7 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, quisquam cupiditate. Pariatur fugiat
           doloremque architecto vero, impedit ea qui nihil eligendi a ipsum eaque magni voluptat
         </p>
-        <button>learn more</button>
+        <a href="#idea">learn more</a>
       </div>
       <div class="image">
         <img src="./Images/landing.png" alt="main-image">
@@ -126,8 +127,8 @@
     </div>
   </article>
   <!-- End Second Features -->
-  <script src="JS/dist/main.js"> </script>
   <script src="JS/all.min.js"> </script>
+  <script src="JS/dist/main.js"></script>
 </body>
 
 </html>
