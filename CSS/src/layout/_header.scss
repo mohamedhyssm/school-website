@@ -1,3 +1,5 @@
+$white: #fff;
+
 header {
   box-shadow: 0 0 10px 0 #ddd;
   background-color: white;
@@ -10,7 +12,6 @@ header {
   .container {
     @include flex-space-between(true);
     position: relative;
-    z-index: 9999;
 
     .logo {
       padding: 15px 0;
@@ -72,7 +73,7 @@ header {
         margin-left: 20px;
         padding: 30px;
         // color
-        background-color: #fff;
+        background-color: $white;
         // display: none;
         flex-direction: column;
         text-align: center;
@@ -83,7 +84,7 @@ header {
           right: 0;
           top: -29px;
           border: 15px solid;
-          border-color: transparent #fff #fff transparent;
+          border-color: transparent $white $white transparent;
         }
 
       }

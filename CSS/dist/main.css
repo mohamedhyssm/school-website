@@ -81,7 +81,6 @@ header .container {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-  z-index: 9999;
 }
 header .container .logo {
   padding: 15px 0;
@@ -349,6 +348,51 @@ article .container img {
           animation: fadeInDown 1s forwards;
 }
 
+footer {
+  background-color: #464f65;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+footer div {
+  color: #fff;
+}
+footer div h4 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+footer div .members {
+  display: grid;
+  grid-template-columns: 180px 170px;
+  gap: 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+footer div .members span {
+  padding: 5px;
+}
+footer div .members span svg {
+  -webkit-animation: rotate 5s linear infinite;
+          animation: rotate 5s linear infinite;
+}
+
+@-webkit-keyframes rotate {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
 @-webkit-keyframes up-and-down {
   0%,
   100% {
@@ -360,7 +404,6 @@ article .container img {
             transform: translateY(-50px);
   }
 }
-
 @keyframes up-and-down {
   0%,
   100% {

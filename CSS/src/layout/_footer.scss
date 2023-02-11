@@ -1,0 +1,38 @@
+footer {
+  background-color: #464f65;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  div {
+    color: #fff;
+
+    h4 {
+      font-size: 30px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .members {
+      display: grid;
+      grid-template-columns: 180px 170px;
+      gap: 10px;
+      justify-content: center;
+      align-items: center;
+
+      span {
+        padding: 5px;
+
+        svg {
+          animation: rotate 5s linear infinite;
+        }
+      }
+    }
+
+  }
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
