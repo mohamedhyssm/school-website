@@ -1,11 +1,13 @@
 "use strict";
-// navbar
-let burgerIcon = document.getElementById("burgerIcon"), ulNavBar = document.getElementById("ulNavBar"), anchorsNavBar = Array.from(document.querySelectorAll("#ulNavBar li a")), ideaLink = document.getElementById("ideaLink"), featurelink = document.getElementById("featurelink"), 
-// first feature and idea article
-firstIdea = document.getElementById("article-1"), firstFeature = document.getElementById("feature-1"), 
-// all articles and features container
-firstIdeaContainer = document.querySelector(".article-1 .container"), secondIdeaContainer = document.querySelector(".article-2 .container"), firstFeatureContainer = document.querySelector(".feature-1 .container"), secondFeatureContainer = document.querySelector(".feature-2 .container"), 
-// feature and idea title
+// nav
+let burgerIcon = document.getElementById("burgerIcon"), ulNavBar = document.getElementById("ulNavBar"), anchorNavBar = Array.from(document.querySelectorAll("#ulNavBar li a")), 
+//links
+ideaLink = document.getElementById("ideaLink"), featurelink = document.getElementById("featurelink"), 
+// Ideas Article
+firstIdea = document.getElementById("article-1"), firstFeature = document.getElementById("feature-1"), firstIdeaContainer = document.querySelector(".article-1 .container"), secondIdeaContainer = document.querySelector(".article-2 .container"), 
+// Feature Articles
+firstFeatureContainer = document.querySelector(".feature-1 .container"), secondFeatureContainer = document.querySelector(".feature-2 .container"), 
+// main Heading
 ideaHeading = document.getElementById("main-heading-idea"), featureHeading = document.getElementById("main-heading-feature");
 handleNavBar();
 burgerIcon.addEventListener("click", () => {
@@ -49,20 +51,20 @@ window.addEventListener("scroll", () => {
     }
     if (window.scrollY <= firstIdea.offsetTop - 90) {
         removeActiveAnchors();
-        anchorsNavBar[0].classList.add("active");
+        anchorNavBar[0].classList.add("active");
     }
     if (window.scrollY >= (firstIdea.offsetTop - 90)) {
         removeActiveAnchors();
-        anchorsNavBar[1].classList.add("active");
+        anchorNavBar[1].classList.add("active");
     }
     if (window.scrollY >= (firstFeature.offsetTop - 90)) {
         removeActiveAnchors();
-        anchorsNavBar[2].classList.add("active");
+        anchorNavBar[2].classList.add("active");
     }
 });
 function handleNavBar() {
     if (window.innerWidth <= 600) {
-        anchorsNavBar.forEach((a) => a.addEventListener("click", function () {
+        anchorNavBar.forEach((a) => a.addEventListener("click", function () {
             ulNavBar.classList.remove("ul-flex");
         }));
     }
@@ -74,7 +76,7 @@ function handleScroll(section) {
     });
 }
 function removeActiveAnchors() {
-    anchorsNavBar.forEach((a) => {
+    anchorNavBar.forEach((a) => {
         a.classList.remove("active");
     });
 }

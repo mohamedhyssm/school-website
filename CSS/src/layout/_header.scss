@@ -1,8 +1,6 @@
-$white: #fff;
-
 header {
   box-shadow: 0 0 10px 0 #ddd;
-  background-color: white;
+  background-color: $white;
   position: fixed;
   left: 0;
   top: 0;
