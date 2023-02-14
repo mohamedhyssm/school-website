@@ -18,8 +18,8 @@ chatInput.onclick = () => {
     containerDiv.setAttribute("style", "display: block");
 };
 chatInput.addEventListener("keydown", (event) => {
-    result.innerHTML = "";
     if (event.key === "Enter") {
+        result.innerHTML = "";
         for (let i = 0; i < Answers.notFound.length; i++) {
             setTimeout(() => {
                 result.append(Answers.notFound[i]);

@@ -33,8 +33,8 @@ chatInput.onclick = () => {
 }
 
 chatInput.addEventListener("keydown", (event: KeyboardEvent) => {
-  result.innerHTML = "";
   if (event.key === "Enter") {
+    result.innerHTML = "";
     for (let i = 0; i < Answers.notFound.length; i++) {
       setTimeout(() => {
         result.append(Answers.notFound[i]);
