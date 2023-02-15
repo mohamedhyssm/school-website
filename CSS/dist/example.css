@@ -36,12 +36,6 @@ a {
   margin-right: auto;
 }
 
-.container-fluid {
-  width: 100%;
-  padding-left: 25px;
-  padding-right: 25px;
-}
-
 /* Small */
 @media (min-width: 768px) {
   .container {
@@ -60,6 +54,79 @@ a {
     width: 1170px;
   }
 }
+.news,
+.AI,
+.contact,
+.exercises,
+.quiz,
+.lessons {
+  background-image: -webkit-gradient(linear, left top, right top, from(#eee), to(#ddd));
+  background-image: linear-gradient(90deg, #eee, #ddd);
+  min-height: calc(100vh - 103px);
+  padding: 20px;
+}
+@media (max-width: 404px) {
+  .news,
+  .AI,
+  .contact,
+  .exercises,
+  .quiz,
+  .lessons {
+    min-height: calc(100vh - 127px);
+  }
+}
+.news .div-icon,
+.AI .div-icon,
+.contact .div-icon,
+.exercises .div-icon,
+.quiz .div-icon,
+.lessons .div-icon {
+  margin-top: 20px;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.news .div-icon svg,
+.AI .div-icon svg,
+.contact .div-icon svg,
+.exercises .div-icon svg,
+.quiz .div-icon svg,
+.lessons .div-icon svg {
+  font-size: 70px;
+  color: #10c3f7;
+  margin-bottom: 20px;
+}
+.news h3,
+.AI h3,
+.contact h3,
+.exercises h3,
+.quiz h3,
+.lessons h3 {
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+button {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 5px;
+  border-radius: 10px;
+  padding: 8px 16px;
+  background-color: #10c3f7;
+  color: #fff;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 6px 6px #03a9f4 inset;
+          box-shadow: 0 0 6px 6px #03a9f4 inset;
+}
+
 .page {
   display: grid;
   grid-template-columns: 250px 1fr;
@@ -144,38 +211,6 @@ a {
   width: 20px;
 }
 
-.news,
-.AI,
-.contact,
-.exercises,
-.quiz,
-.lessons {
-  background-image: -webkit-gradient(linear, left top, right top, from(#eee), to(#ddd));
-  background-image: linear-gradient(90deg, #eee, #ddd);
-  min-height: calc(100vh - 103px);
-  padding: 20px;
-}
-@media (max-width: 404px) {
-  .news,
-  .AI,
-  .contact,
-  .exercises,
-  .quiz,
-  .lessons {
-    min-height: calc(100vh - 127px);
-  }
-}
-.news h3,
-.AI h3,
-.contact h3,
-.exercises h3,
-.quiz h3,
-.lessons h3 {
-  text-align: center;
-  font-size: 22px;
-  font-weight: bold;
-}
-
 header {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -206,15 +241,7 @@ header .personal-data span {
   }
 }
 
-.lessons .lessons-icon {
-  margin-top: 20px;
-  text-align: center;
-}
-.lessons .lessons-icon svg {
-  font-size: 70px;
-  color: #10c3f7;
-  margin-bottom: 20px;
-}
+.news .card,
 .lessons .card {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -223,7 +250,45 @@ header .personal-data span {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+.news .card .text,
+.lessons .card .text {
+  width: 60%;
+}
+.news .card .text h4,
+.lessons .card .text h4 {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #10c3f7;
+}
+.news .card .text p,
+.lessons .card .text p {
+  font-size: 18px;
+  line-height: 1.8;
+}
+.news .card .text .buttons,
+.lessons .card .text .buttons {
+  text-align: end;
+}
+.news .card .text .buttons button,
+.lessons .card .text .buttons button {
+  margin: 10px;
+}
+.news .card .text .buttons button:hover,
+.lessons .card .text .buttons button:hover {
+  background-color: #0ba4d1;
+}
+.news .card .image,
+.lessons .card .image {
+  width: 600px;
+  margin-top: -10px;
+}
+.news .card .image img,
+.lessons .card .image img {
+  width: 100%;
+}
 @media (max-width: 992px) {
+  .news .card,
   .lessons .card {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -233,49 +298,84 @@ header .personal-data span {
         -ms-flex-align: center;
             align-items: center;
   }
+  .news .card .text,
   .lessons .card .text {
+    width: 100%;
+    padding: 20px;
     text-align: center;
   }
+  .news .card .text .buttons,
+  .lessons .card .text .buttons {
+    text-align: center;
+  }
+  .news .card .image,
   .lessons .card .image {
     -webkit-box-ordinal-group: 0;
         -ms-flex-order: -1;
             order: -1;
-    width: 300px !important;
+    width: 300px;
   }
 }
-.lessons .card .text {
-  width: 70%;
+
+.exercises .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-.lessons .card .text h4 {
-  font-size: 22px;
+.exercises .card .text {
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+.exercises .card .text h4 {
+  font-size: 25px;
   font-weight: bold;
   margin-bottom: 20px;
   color: #10c3f7;
 }
-.lessons .card .text p {
+.exercises .card .text p {
   font-size: 18px;
   line-height: 1.8;
 }
-.lessons .card .image {
-  width: 600px;
+.exercises .card .text button {
+  margin: 10px;
 }
-.lessons .card .image img {
+.exercises .card .text button:hover {
+  background-color: #0ba4d1;
+}
+.exercises .card .image {
+  width: 400px;
+  margin-top: -10px;
+}
+.exercises .card .image img {
   width: 100%;
 }
+@media (max-width: 992px) {
+  .exercises .card .image {
+    width: 200px;
+  }
+}
 
-.quiz .quiz-icon {
-  margin-top: 20px;
-  text-align: center;
-}
-.quiz .quiz-icon svg {
-  font-size: 70px;
-  color: #10c3f7;
-  margin-bottom: 20px;
-}
 .quiz .code {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 20px auto;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -287,22 +387,14 @@ header .personal-data span {
   width: 312px;
   padding: 10px;
   border: none;
-  padding: 14px 17px;
 }
 @media (max-width: 600px) {
   .quiz .code input {
-    width: 200px;
+    width: 150px;
   }
 }
 .quiz .code button {
-  width: 50px;
-  font-size: 20px;
-  font-weight: 500;
-  background-color: #10c3f7;
-  color: #fff;
-  cursor: pointer;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  margin: 5px;
 }
 .quiz .code button:hover {
   background-color: #0ba4d1;
@@ -333,27 +425,6 @@ header .personal-data span {
       -ms-flex-pack: justify;
           justify-content: space-between;
   position: relative;
-}
-.AI .robot {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-.AI .robot svg {
-  display: block;
-  font-size: 70px;
-  color: #10c3f7;
-  margin-bottom: 10px;
 }
 .AI .examples h4 {
   text-align: center;
@@ -426,16 +497,9 @@ header .personal-data span {
     height: 100px;
   }
 }
-.contact form input[type="submit"] {
-  background-color: #10c3f7;
-  color: white;
-  padding: 20px;
-  border: none;
-  border-radius: 4px;
+.contact form button {
   -ms-flex-item-align: end;
       align-self: end;
-  text-transform: uppercase;
-  cursor: pointer;
 }
 
 /*# sourceMappingURL=example.css.map */

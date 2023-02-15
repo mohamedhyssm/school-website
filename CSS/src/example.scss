@@ -6,30 +6,8 @@
 
 @import "./layout/aside";
 
-
-.news,
-.AI,
-.contact,
-.exercises,
-.quiz,
-.lessons {
-  background-image: $linearGrad;
-  min-height: calc(100vh - 103px);
-  padding: 20px;
-
-  @media (max-width: 404px) {
-    min-height: calc(100vh - 127px);
-  }
-
-  h3 {
-    text-align: center;
-    @include font(22px, bold)
-  }
-}
-
 // Start header
 header {
-
   padding-top: 20px;
   padding-bottom: 20px;
 
@@ -59,48 +37,19 @@ header {
 
 // End header
 
-// Start news
+// Start news And Lessons
 
-.news {}
-
-// End news
-
-// Start lessons
-
+.news,
 .lessons {
-  .lessons-icon {
-    margin-top: 20px;
-    text-align: center;
-
-    svg {
-      font-size: 70px;
-      color: $lightBlue;
-      margin-bottom: 20px;
-    }
-  }
 
   .card {
     @include flex-space-between();
 
-    @media (max-width: 992px) {
-      flex-direction: column;
-      align-items: center;
-
-      .text {
-        text-align: center;
-      }
-
-      .image {
-        order: -1;
-        width: 300px !important;
-      }
-    }
-
     .text {
-      width: 70%;
+      width: 60%;
 
       h4 {
-        @include font(22px, bold);
+        @include font(25px, bold);
         margin-bottom: 20px;
         color: $lightBlue;
       }
@@ -109,44 +58,114 @@ header {
         font-size: $mainPSize;
         line-height: $mainLineHeight;
       }
+
+      .buttons {
+        text-align: end;
+
+        button {
+          margin: 10px;
+
+          &:hover {
+            background-color: $lightBlueActive;
+          }
+        }
+      }
+
     }
 
     .image {
       width: 600px;
+      margin-top: -10px;
 
       img {
         width: 100%;
 
       }
     }
-  }
 
+    @media (max-width: 992px) {
+      flex-direction: column;
+      align-items: center;
+
+      .text {
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+
+        .buttons {
+          text-align: center;
+        }
+      }
+
+      .image {
+        order: -1;
+        width: 300px;
+      }
+    }
+  }
 }
 
-// End lessons
+// End news And Lessons
 
 // Start exercise
 
-.exercises {}
+.exercises {
+
+  .card {
+    @include flex-space-between();
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .text {
+      width: 100%;
+      padding: 20px;
+      text-align: center;
+
+      h4 {
+        @include font(25px, bold);
+        margin-bottom: 20px;
+        color: $lightBlue;
+      }
+
+      p {
+        font-size: $mainPSize;
+        line-height: $mainLineHeight;
+      }
+
+      button {
+        margin: 10px;
+
+        &:hover {
+          background-color: $lightBlueActive;
+        }
+      }
+    }
+
+    .image {
+      width: 400px;
+      margin-top: -10px;
+
+      img {
+        width: 100%;
+      }
+
+      @media (max-width: 992px) {
+        width: 200px;
+      }
+    }
+  }
+}
 
 // End exercise
 
 // Start Quiz
 
 .quiz {
-  .quiz-icon {
-    margin-top: 20px;
-    text-align: center;
-
-    svg {
-      font-size: 70px;
-      color: $lightBlue;
-      margin-bottom: 20px;
-    }
-  }
 
   .code {
     display: flex;
+    align-items: center;
     margin: 20px auto;
     width: fit-content;
     padding: 4px;
@@ -156,20 +175,14 @@ header {
       width: 312px;
       padding: 10px;
       border: none;
-      padding: 14px 17px;
 
       @media (max-width: 600px) {
-        width: 200px;
+        width: 150px;
       }
     }
 
     button {
-      width: 50px;
-      @include font(20px, 500);
-      background-color: $lightBlue;
-      color: $white;
-      cursor: pointer;
-      transition: $mainTransition;
+      margin: 5px;
 
       &:hover {
         background-color: $lightBlueActive;
@@ -193,17 +206,6 @@ header {
   flex-direction: column;
   justify-content: space-between;
   position: relative;
-
-  .robot {
-    @include flex-center(true);
-
-    svg {
-      display: block;
-      font-size: 70px;
-      color: $lightBlue;
-      margin-bottom: 10px;
-    }
-  }
 
   .examples {
     h4 {
@@ -280,15 +282,8 @@ header {
       }
     }
 
-    input[type="submit"] {
-      background-color: $lightBlue;
-      color: white;
-      padding: 20px;
-      border: none;
-      border-radius: 4px;
+    button {
       align-self: end;
-      text-transform: uppercase;
-      cursor: pointer;
     }
   }
 }
