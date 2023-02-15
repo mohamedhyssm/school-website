@@ -241,7 +241,6 @@ header .personal-data span {
   }
 }
 
-.news .card,
 .lessons .card {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -250,45 +249,36 @@ header .personal-data span {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.news .card .text,
 .lessons .card .text {
   width: 60%;
 }
-.news .card .text h4,
 .lessons .card .text h4 {
   font-size: 25px;
   font-weight: bold;
   margin-bottom: 20px;
   color: #10c3f7;
 }
-.news .card .text p,
 .lessons .card .text p {
   font-size: 18px;
   line-height: 1.8;
 }
-.news .card .text .buttons,
 .lessons .card .text .buttons {
   text-align: end;
 }
-.news .card .text .buttons button,
 .lessons .card .text .buttons button {
   margin: 10px;
 }
-.news .card .text .buttons button:hover,
 .lessons .card .text .buttons button:hover {
   background-color: #0ba4d1;
 }
-.news .card .image,
 .lessons .card .image {
-  width: 600px;
+  width: 500px;
   margin-top: -10px;
 }
-.news .card .image img,
 .lessons .card .image img {
   width: 100%;
 }
 @media (max-width: 992px) {
-  .news .card,
   .lessons .card {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -298,17 +288,14 @@ header .personal-data span {
         -ms-flex-align: center;
             align-items: center;
   }
-  .news .card .text,
   .lessons .card .text {
     width: 100%;
     padding: 20px;
     text-align: center;
   }
-  .news .card .text .buttons,
   .lessons .card .text .buttons {
     text-align: center;
   }
-  .news .card .image,
   .lessons .card .image {
     -webkit-box-ordinal-group: 0;
         -ms-flex-order: -1;
@@ -317,7 +304,8 @@ header .personal-data span {
   }
 }
 
-.exercises .card {
+.exercises .card,
+.news .card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -335,36 +323,44 @@ header .personal-data span {
       -ms-flex-align: center;
           align-items: center;
 }
-.exercises .card .text {
-  width: 100%;
+.exercises .card .text,
+.news .card .text {
+  width: 80%;
   padding: 20px;
   text-align: center;
 }
-.exercises .card .text h4 {
+.exercises .card .text h4,
+.news .card .text h4 {
   font-size: 25px;
   font-weight: bold;
   margin-bottom: 20px;
   color: #10c3f7;
 }
-.exercises .card .text p {
+.exercises .card .text p,
+.news .card .text p {
   font-size: 18px;
   line-height: 1.8;
 }
-.exercises .card .text button {
+.exercises .card .text button,
+.news .card .text button {
   margin: 10px;
 }
-.exercises .card .text button:hover {
+.exercises .card .text button:hover,
+.news .card .text button:hover {
   background-color: #0ba4d1;
 }
-.exercises .card .image {
+.exercises .card .image,
+.news .card .image {
   width: 400px;
   margin-top: -10px;
 }
-.exercises .card .image img {
+.exercises .card .image img,
+.news .card .image img {
   width: 100%;
 }
 @media (max-width: 992px) {
-  .exercises .card .image {
+  .exercises .card .image,
+  .news .card .image {
     width: 200px;
   }
 }

@@ -37,9 +37,9 @@ header {
 
 // End header
 
-// Start news And Lessons
+// Start Lessons
 
-.news,
+
 .lessons {
 
   .card {
@@ -74,7 +74,7 @@ header {
     }
 
     .image {
-      width: 600px;
+      width: 500px;
       margin-top: -10px;
 
       img {
@@ -105,12 +105,12 @@ header {
   }
 }
 
-// End news And Lessons
+// End Lessons
 
-// Start exercise
+// Start news And exercise
 
-.exercises {
-
+.exercises,
+.news {
   .card {
     @include flex-space-between();
     flex-direction: column;
@@ -118,7 +118,7 @@ header {
     align-items: center;
 
     .text {
-      width: 100%;
+      width: 80%;
       padding: 20px;
       text-align: center;
 
@@ -157,7 +157,7 @@ header {
   }
 }
 
-// End exercise
+// End news And exercise
 
 // Start Quiz
 
