@@ -3,7 +3,8 @@ let burgerIcon = <HTMLDivElement>document.getElementById("burgerIcon"),
   ulNavBar = <HTMLUListElement>document.getElementById("ulNavBar"), 
   anchorsNavBar = <HTMLAnchorElement[]> Array.from(document.querySelectorAll("#ulNavBar li a")), 
   ideaLink = <HTMLAnchorElement>document.getElementById("ideaLink"), 
-  featurelink = <HTMLAnchorElement>document.getElementById("featurelink"), 
+  featurelink = <HTMLAnchorElement>document.getElementById("featurelink"),
+  anchorlearnMore = <HTMLAnchorElement>document.getElementById("learnMore"),
   // first feature and idea article
   firstIdea = <HTMLDivElement>document.getElementById("article-1"), 
   firstFeature = <HTMLDivElement>document.getElementById("feature-1"), 
@@ -26,6 +27,11 @@ burgerIcon.addEventListener("click", () => {
 
 
 ideaLink.onclick = function (e) {
+  e.preventDefault();
+  handleScroll(firstIdea);
+};
+
+anchorlearnMore.onclick = function (e) {
   e.preventDefault();
   handleScroll(firstIdea);
 };

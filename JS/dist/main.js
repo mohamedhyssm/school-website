@@ -1,6 +1,6 @@
 "use strict";
 // navbar
-let burgerIcon = document.getElementById("burgerIcon"), ulNavBar = document.getElementById("ulNavBar"), anchorsNavBar = Array.from(document.querySelectorAll("#ulNavBar li a")), ideaLink = document.getElementById("ideaLink"), featurelink = document.getElementById("featurelink"), 
+let burgerIcon = document.getElementById("burgerIcon"), ulNavBar = document.getElementById("ulNavBar"), anchorsNavBar = Array.from(document.querySelectorAll("#ulNavBar li a")), ideaLink = document.getElementById("ideaLink"), featurelink = document.getElementById("featurelink"), anchorlearnMore = document.getElementById("learnMore"), 
 // first feature and idea article
 firstIdea = document.getElementById("article-1"), firstFeature = document.getElementById("feature-1"), 
 // all articles and features container
@@ -12,6 +12,10 @@ burgerIcon.addEventListener("click", () => {
     ulNavBar.classList.toggle("ul-flex");
 });
 ideaLink.onclick = function (e) {
+    e.preventDefault();
+    handleScroll(firstIdea);
+};
+anchorlearnMore.onclick = function (e) {
     e.preventDefault();
     handleScroll(firstIdea);
 };

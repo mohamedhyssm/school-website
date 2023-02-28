@@ -284,6 +284,10 @@ header {
 
     button {
       align-self: end;
+
+      &:hover {
+        background-color: $lightBlueActive;
+      }
     }
   }
 }

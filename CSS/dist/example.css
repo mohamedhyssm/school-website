@@ -497,5 +497,7 @@ header .personal-data span {
   -ms-flex-item-align: end;
       align-self: end;
 }
-
+.contact form button:hover {
+  background-color: #0ba4d1;
+}
 /*# sourceMappingURL=example.css.map */
